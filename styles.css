@@ -1,0 +1,45 @@
+  table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #000;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .bg-primary {
+            background-color: #007bff;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .text-danger {
+            color: red;
+        }
+
+        input {
+            
+            width:max-content;
+            height:30px;
+            border-radius:20px;
+            border:solid 2px  #007bff;
+            padding:10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+        }
+        input:hover{
+            background-color:#EBFFD8;
+        }
+    
