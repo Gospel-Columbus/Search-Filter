@@ -98,10 +98,9 @@
         // Search logic, setting up and event listener.
         document.getElementById("search").addEventListener("keyup", function () {
             var search = this.value.toLowerCase().trim();
-          // if the search input is empty, hide the table and clear any error messages.
+          // if the search input is empty, show the table.
             if (search === "") {
-                document.getElementById("mytable").style.display = "none";
-                document.getElementById("error").innerHTML = "";
+                showtable(array);
                 return;
             }
             // filter the function array using this conditions.
