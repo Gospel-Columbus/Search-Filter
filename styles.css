@@ -1,45 +1,127 @@
-  table {
-            width: 100%;
+  body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        body > table {
+            width: 80%;
+        }
+        table {
             border-collapse: collapse;
-            margin-top: 10px;
         }
-
-        table, th, td {
-            border: 1px solid #000;
+        table.list {
+            width: 100%;
         }
-
-        th, td {
-            padding: 10px;
+        td, th {
+            border: 1px solid #dddddd;
             text-align: left;
+            padding: 8px;
         }
-
-        .bg-primary {
-            background-color: #007bff;
+        tr:nth-child(even), table.list thead>tr {
+            background-color: #dddddd;
         }
-
-        .text-white {
+        input[type=text], input[type=number] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=submit], button {
+            background-color: #4CAF50;
             color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
-
-        .fw-bold {
+        form div.form-action-buttons {
+            text-align: right;
+        }
+        a {
+            cursor: pointer;
+            text-decoration: underline;
+            color: #0000ee;
+            margin-right: 4px;
+        }
+        label.validation-error {
+            color: red;
+            margin-left: 5px;
+        }
+        .hide {
+            display: none;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
             font-weight: bold;
         }
-
-        .text-danger {
-            color: red;
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
-
-        input {
-            
+        .search-container {
+            margin: 20px 0;
+        }
+        #search {
+        
             width:max-content;
-            height:30px;
+            height:60px;
             border-radius:20px;
             border:solid 2px  #007bff;
             padding:10px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-        
         }
         input:hover{
             background-color:#EBFFD8;
         }
     
+        .bg-primary {
+            background-color: #007bff!important;
+        }
+        .text-white {
+            color: white!important;
+        }
+        .fw-bold {
+            font-weight: bold!important;
+        }
+        .text-danger {
+            color: red!important;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 5px;
+        }
+        .action-buttons button {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        .action-buttons .edit-btn {
+            background-color: #ffc107;
+        }
+        .action-buttons .delete-btn {
+            background-color: #dc3545;
+        }

@@ -9,11 +9,54 @@
 </head>
 <body>
      
-    <input type="text" id="search" placeholder="Search..." />
-
-    <p id="error"></p>
-    <table id="mytable" style="display: none;"></table>
-
+    
+    <button id="addBtn" onclick="openModal()">Add New Student</button>
+    
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search...">
+        <div id="error"></div>
+    </div>
+    
+    <table id="mytable" class="list">
+        <tr class="bg-primary text-white fw-bold">
+            <td>ID</td>
+            <td>NAME</td>
+            <td>AGE</td>
+            <td>CLASS</td>
+            <td>ACTIONS</td>
+        </tr>
+    </table>
+    
+    <!-- Add/Edit Student Modal -->
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Add New Student</h2>
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <div>
+                    <label>Id*</label>
+                    <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                    <input type="text" name="id" id="id">
+                </div>
+                <div>
+                    <label>Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    <label>Age</label>
+                    <input type="text" name="age" id="age">
+                </div>
+                <div>
+                    <label>Class</label>
+                    <input type="text" name="class" id="class">
+                </div>
+                <div class="form-action-buttons">
+                    <input type="submit" value="Submit">
+                    <button type="button" onclick="closeModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
     
 <!--External JavaScript-->
     <script src="script.js"></script>
