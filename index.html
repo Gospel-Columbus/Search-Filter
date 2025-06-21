@@ -33,23 +33,29 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="modalTitle">Add New Student</h2>
             <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-                <div>
-                    <label>Id*</label>
-                    <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                    <input type="text" name="id" id="id">
-                </div>
-                <div>
-                    <label>Name</label>
-                    <input type="text" name="name" id="name">
-                </div>
-                <div>
-                    <label>Age</label>
-                    <input type="text" name="age" id="age">
-                </div>
-                <div>
-                    <label>Class</label>
-                    <input type="text" name="class" id="class">
-                </div>
+               <div>
+                <label>Id*</label>            
+                <label class="validation-error hide" id="idValidationError">This field is required.</label>
+                <input type="text" name="id" id="id">
+            </div>
+
+        <div>
+            <label>Name*</label>
+            <label class="validation-error hide" id="nameValidationError">This field is required.</label>
+            <input type="text" name="name" id="name">
+        </div>
+
+        <div>
+            <label>Age*</label>
+            <label class="validation-error hide" id="ageValidationError">This field is required.</label>
+            <input type="text" name="age" id="age">
+        </div>
+
+        <div>
+            <label>Class*</label>
+            <label class="validation-error hide" id="classValidationError">This field is required.</label>
+            <input type="text" name="class" id="class">
+        </div>
                 <div class="form-action-buttons">
                     <input type="submit" value="Submit">
                     <button type="button" onclick="closeModal()">Cancel</button>
